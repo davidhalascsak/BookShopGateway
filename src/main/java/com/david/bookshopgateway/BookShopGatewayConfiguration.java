@@ -14,7 +14,7 @@ public class BookShopGatewayConfiguration {
 
         return builder.routes()
                 .route(p -> p.path("/books/**")
-                        .uri("lb://books")
+                        .uri("lb://book")
                 )
                 .build();
     }
