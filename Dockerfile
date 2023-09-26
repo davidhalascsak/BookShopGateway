@@ -4,5 +4,5 @@ WORKDIR /app
 RUN mvn package -DskipTests
 
 FROM openjdk:17-ea-slim
-COPY --from=build /app/target/BookShowGateway-0.0.1.jar /app.jar
+COPY --from=build /app/target/BookShopGateway-0.0.1.jar /app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
